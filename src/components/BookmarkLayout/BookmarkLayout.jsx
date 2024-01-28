@@ -1,17 +1,16 @@
+import React from "react";
 import { Outlet } from "react-router-dom";
 import Map from "../Map/Map";
-import { UseHotels } from "../context/HotelProvider";
 
-function AppLayout() {
-  const { hotels } = UseHotels();
+function BookmarkLayout() {
   return (
     <div className="appLayout">
       <div className="sidebar">
         <Outlet />
       </div>
-      <Map markerLoacations={hotels} />
+      <Map markerLoacations={[]} />
     </div>
   );
 }
 
-export default AppLayout;
+export default BookmarkLayout;

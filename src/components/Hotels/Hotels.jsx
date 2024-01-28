@@ -3,7 +3,6 @@ import { UseHotels } from "../context/HotelProvider";
 
 function Hotels() {
   const { isLoading, hotels, currentHotel } = UseHotels();
-  console.log(currentHotel);
 
   if (isLoading) return <div>isloading...</div>;
   return (
